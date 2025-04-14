@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router";
 
 const UserCard = ({ user }) => {
-  const { name, email, phone } = user;
+  const { id, name, email, phone } = user;
   return (
     <div className="border rounded-2xl p-4 space-y-2">
       <div>
@@ -10,7 +11,7 @@ const UserCard = ({ user }) => {
         <p> Phone: {phone} </p>
       </div>
       <div>
-        <button className="btn"> show details </button> 
+        <Link to={`/users/${id}`}>show details </Link>
       </div>
     </div>
   );
